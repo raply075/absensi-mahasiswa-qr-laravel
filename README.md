@@ -9,7 +9,7 @@ Sistem Absensi Mahasiswa berbasis **QR Code** yang dikembangkan menggunakan **La
 
 ---
 
-## 📸 Preview
+# 📸 Preview
 
 ### Landing Page
 
@@ -82,16 +82,30 @@ Install dependency
 composer install
 ```
 
-Copy file .env
+Copy file environment
 
 ```bash
 cp .env.example .env
 ```
 
-Generate Key
+Generate application key
 
 ```bash
 php artisan key:generate
+```
+
+Atur konfigurasi database pada file **.env**
+
+```env
+DB_DATABASE=absensi_mahasiswa
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+Migrasi dan Seeder
+
+```bash
+php artisan migrate --seed
 ```
 
 Install Node Module
@@ -106,17 +120,27 @@ Compile Asset
 npm run dev
 ```
 
-Migrasi Database
-
-```bash
-php artisan migrate
-```
-
-Jalankan Server
+Jalankan aplikasi
 
 ```bash
 php artisan serve
 ```
+
+---
+
+# 🔑 Demo Account
+
+## 👨‍💼 Admin
+
+| Email           | Password |
+| --------------- | -------- |
+| admin@gmail.com | admin123 |
+
+## 👨‍🎓 Mahasiswa
+
+| Email           | Password |
+| --------------- | -------- |
+| raply@gmail.com | 12345678 |
 
 ---
 
@@ -151,10 +175,13 @@ Mahasiswa
 Mahasiswa
      │
      ▼
+Login
+     │
+     ▼
 Generate QR Code
      │
      ▼
-Scan QR
+Scan QR Code
      │
      ▼
 Validasi QR
@@ -166,7 +193,7 @@ Cek Absensi Hari Ini
 Simpan Database
      │
      ▼
-Dashboard
+Dashboard & Laporan
 ```
 
 ---
@@ -175,12 +202,11 @@ Dashboard
 
 **Raply Fediansyah**
 
-GitHub
-
-https://github.com/raply075
+- GitHub : https://github.com/raply075
+- Email : raply@gmail.com
 
 ---
 
 # ⭐ Repository
 
-Jika project ini bermanfaat, jangan lupa memberikan ⭐ pada repository ini.
+Apabila project ini bermanfaat, jangan lupa memberikan ⭐ pada repository ini.
