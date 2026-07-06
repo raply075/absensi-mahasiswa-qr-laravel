@@ -13,19 +13,23 @@ Sistem Absensi Mahasiswa berbasis **QR Code** yang dikembangkan menggunakan **La
 
 ### Landing Page
 
-> Tambahkan screenshot landing page di sini.
+> <img width="1913" height="756" alt="image" src="https://github.com/user-attachments/assets/ddf1d614-45c6-4296-b190-35af2ea2a317" />
+
 
 ### Dashboard Admin
 
-> Tambahkan screenshot dashboard admin.
+> <img width="1915" height="867" alt="image" src="https://github.com/user-attachments/assets/663eb280-2791-4e47-9e62-b79003a04263" />
+
 
 ### Dashboard Mahasiswa
 
-> Tambahkan screenshot dashboard mahasiswa.
+> <img width="1912" height="858" alt="image" src="https://github.com/user-attachments/assets/733ea0ca-4672-4128-a74d-7d20c3f88e71" />
+
 
 ### QR Code Mahasiswa
 
-> Tambahkan screenshot QR Code.
+> <img width="1912" height="863" alt="image" src="https://github.com/user-attachments/assets/5091bb5a-73b4-43b7-913c-cf4f0d1d766f" />
+
 
 ---
 
