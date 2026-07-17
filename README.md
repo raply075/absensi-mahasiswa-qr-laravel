@@ -207,7 +207,7 @@ Dashboard & Laporan
 **Raply Fediansyah**
 
 - GitHub : https://github.com/raply075
-- Email : raply@gmail.com
+- Email : raply060104@gmail.com
 
 ---
 
