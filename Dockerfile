@@ -1,5 +1,6 @@
-FROM php:8.3-cli
+FROM php:8.3-cli-bookworm
 
+# Install system packages
 RUN apt-get update && apt-get install -y \
     git \
     curl \
@@ -9,17 +10,36 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     libonig-dev \
     libxml2-dev \
-    && docker-php-ext-install pdo_mysql zip gd
+    gnupg \
+    ca-certificates
 
+# Install Node.js 22
+RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
+    && apt-get install -y nodejs
+
+# Install PHP extensions
+RUN docker-php-ext-install pdo_mysql zip gd
+
+# Install Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 WORKDIR /app
 
 COPY . .
 
+# Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
 
-RUN php artisan config:clear || true
+# Install Node dependencies
+RUN npm install
+
+# Build Vite
+RUN npm run build
+
+# Laravel cache
+RUN php artisan config:cache || true
+RUN php artisan route:cache || true
+RUN php artisan view:cache || true
 
 EXPOSE 8080
 
